@@ -1,17 +1,41 @@
 import * as React from "react";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { FaCode } from "react-icons/fa";
+import { NavbarButtonType } from "./types";
 
 const NavBar = () => {
+  const navbarButtons: NavbarButtonType[] = [
+    {
+      name: "Home",
+      to: "",
+    },
+    {
+      name: "About",
+      to: "",
+    },
+    {
+      name: "Portfolio",
+      to: "",
+    },
+    {
+      name: "CV",
+      to: "",
+    },
+  ];
+
   return (
     <div className="flex h-28 items-center justify-center font-space font-normal text-xl">
       <div className="flex w-full mx-28 justify-between tracking-wider">
-        <p className="font-bold text-2xl">{"</>"} Developer X</p>
-        <div className="flex gap-x-10 text-gray-light">
-          <p>Home</p>
-          <p>About</p>
-          <p>Portfolio</p>
-          <p>CV</p>
+        <div className="flex items-center gap-2">
+          <FaCode className="w-9 h-9 text-blue" />
+          <p className="font-bold text-2xl"> Developer X</p>
+        </div>
+        <div className="flex gap-x-10 text-gray-light items-center">
+          {navbarButtons.map((button) => {
+            return <p>{button.name}</p>;
+          })}
           <div>
-            <p>Menu</p>
+            <RxHamburgerMenu className="w-6 h-6" />
           </div>
         </div>
       </div>
