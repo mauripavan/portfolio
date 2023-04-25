@@ -13,21 +13,21 @@ module.exports = {
       xl: "1440px",
     },
     colors: {
-      blue: "#1fb6ff",
+      blue: "#075FE4",
       purple: "#7e5bef",
       pink: "#ff49db",
       orange: "#ff7849",
       green: "#13ce66",
       yellow: "#ffc82c",
-      "gray-dark": "#273444",
-      gray: "#8492a6",
-      "gray-light": "#d3dce6",
-      white: '#ffffff'
+      "gray-dark": "#5D6C83",
+      gray: "#2D343F",
+      "gray-light": "#F0F2F4",
+      white: "#ffffff",
     },
     fontFamily: {
       sans: ["Graphik", "sans-serif"],
       serif: ["Merriweather", "serif"],
-      oxygen: ["Oxygen", "sans-serif"],
+      space: ["Space Grotesk", "sans-serif"],
     },
     extend: {
       spacing: {
