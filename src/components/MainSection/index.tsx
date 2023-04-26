@@ -40,7 +40,7 @@ const MainSection = () => {
       <div className={"flex flex-col flex-1  justify-center z-10"}>
         <div className="h-2 bg-white w-36 mb-12" />
         <p className="text-7xl font-bold">I'm Mauricio, Front End Dev</p>
-        <p className="font-normal text-gray-light mt-4 text-lg w-1/2">
+        <p className="font-normal text-gray-30 mt-4 text-lg w-1/2">
           Welcome to my website. Let's take a look to some of my jobs!
         </p>
         <div className="flex items-center justify-center bg-blue h-32 w-32 rounded-full mt-20">
@@ -76,7 +76,7 @@ const MainSection = () => {
       </div>
       <Image
         src={profile}
-        className="absolute bottom-0 w-1/2 z-0 left-[22%]"
+        className="absolute bottom-0 w-1/2 z-0 left-[22%] h-full"
         alt={"profile"}
       />
     </div>

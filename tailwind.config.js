@@ -19,9 +19,13 @@ module.exports = {
       orange: "#ff7849",
       green: "#13ce66",
       yellow: "#ffc82c",
-      "gray-dark": "#5D6C83",
-      gray: "#2D343F",
-      "gray-light": "#F0F2F4",
+      gray: {
+        0:"#2D343F",
+        10:"#2d343f66",
+        20:"#5D6C83",
+        30: "#F0F2F4",
+        40: "#C3CAD5",
+      },
       white: "#ffffff",
     },
     fontFamily: {

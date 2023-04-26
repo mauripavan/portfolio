@@ -30,7 +30,7 @@ const NavBar = () => {
           <FaCode className="w-9 h-9 text-blue" />
           <p className="font-bold text-2xl"> Developer X</p>
         </div>
-        <div className="flex gap-x-10 text-gray-light items-center">
+        <div className="flex gap-x-10 text-gray-30 items-center">
           {navbarButtons.map((button) => {
             return <p>{button.name}</p>;
           })}
