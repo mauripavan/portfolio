@@ -4,6 +4,7 @@ import MainSection from "@component/components/MainSection";
 import AboutMeSection from "@component/components/AboutMeSection";
 import TechSection from "@component/components/TechSection";
 import PortfolioSection from "@component/components/PortfolioSection";
+import ContactSection from "@component/components/ContactSection";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,6 +18,7 @@ export default function Home() {
       <AboutMeSection />
       <TechSection />
       <PortfolioSection />
+      <ContactSection />
     </main>
   );
 }
