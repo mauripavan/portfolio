@@ -3,6 +3,7 @@ import NavBar from "@component/components/Navbar";
 import MainSection from "@component/components/MainSection";
 import AboutMeSection from "@component/components/AboutMeSection";
 import TechSection from "@component/components/TechSection";
+import PortfolioSection from "@component/components/PortfolioSection";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,6 +16,7 @@ export default function Home() {
       <MainSection />
       <AboutMeSection />
       <TechSection />
+      <PortfolioSection />
     </main>
   );
 }

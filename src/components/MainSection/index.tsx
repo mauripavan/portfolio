@@ -39,7 +39,7 @@ const MainSection = () => {
     >
       <div className={"flex flex-col flex-1  justify-center z-10"}>
         <div className="h-2 bg-white w-36 mb-12" />
-        <p className="text-7xl font-bold">I'm Mauricio, Front End Dev</p>
+        <p className="text-7xl font-bold w-5/6">I'm Mauricio, Full Stack Dev</p>
         <p className="font-normal text-gray-30 mt-4 text-lg w-1/2">
           Welcome to my website. Let's take a look to some of my jobs!
         </p>
@@ -53,9 +53,10 @@ const MainSection = () => {
           "flex flex-1 flex-col  justify-center items-end text-lg z-10"
         }
       >
-        {cardsInfo.map((card) => {
+        {cardsInfo.map((card, i) => {
           return (
             <HomeCard
+              key={i}
               title={card.title}
               description={card.description}
               link={{

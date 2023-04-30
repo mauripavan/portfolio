@@ -12,7 +12,7 @@ const TechSection = () => {
         </p>
 
         <div className="flex flex-1 justify-between items-end mt-6 mb-16 ">
-          <p className="font-bold text-5xl">My extensive list of skills</p>
+          <p className="font-bold text-5xl">Technologies I use to develop</p>
           <div className="flex gap-4">
             <div className="flex w-20 h-20 bg-gray-0 rounded-full items-center justify-center">
               <FiChevronLeft className="w-7 h-7" />
