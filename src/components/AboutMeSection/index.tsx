@@ -1,8 +1,12 @@
+import { scrollToSection } from "@component/utils/useScroll";
 import { BiRightArrowAlt } from "react-icons/bi";
 
 const AboutMeSection = () => {
   return (
-    <div className={"relative bg-gray-10 font-space tracking-wider "}>
+    <div
+      id="about"
+      className={"relative bg-gray-10 font-space tracking-wider "}
+    >
       <div className="flex flex-1 min-h-screen mx-28">
         <div className="flex flex-1 items-center">
           <div>
@@ -20,9 +24,12 @@ const AboutMeSection = () => {
               Currently, I'm focused on the Front-End side, and I always keep
               learning to stay up to date with new technologies
             </p>
-            <div className="flex items-center gap-2 mb-12 border-b-2 border-gray-20 w-fit h-12">
+            <div
+              onClick={() => scrollToSection("stack")}
+              className="flex items-center gap-2 mb-12 border-b-2 border-gray-20 w-fit h-12 hover:border-white transition-all duration-200 cursor-pointer group"
+            >
               <p>MORE ABOUT ME</p>
-              <BiRightArrowAlt className="w-7 h-7" />
+              <BiRightArrowAlt className="w-7 h-7 transition-all duration-200 group-hover:translate-x-2 group-hover:text-blue" />
             </div>
           </div>
         </div>

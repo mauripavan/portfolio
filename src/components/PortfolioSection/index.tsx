@@ -4,7 +4,7 @@ import usePortfolioSection from "./usePortfolioSection";
 const PortfolioSection = () => {
   const { projects } = usePortfolioSection();
   return (
-    <div className="flex flex-1 min-h-screen bg-gray-10 font-space tracking-wider py-60">
+    <div id="portfolio" className="flex flex-1 min-h-screen bg-gray-10 font-space tracking-wider py-60">
       <div className="flex flex-wrap mx-28">
         <div className="w-1/2">
           <p className="font-bold text-xl">
@@ -23,6 +23,7 @@ const PortfolioSection = () => {
               technologies={project.technologies}
               title={project.title}
               description={project.description}
+              link={project.link}
             />
           );
         })}

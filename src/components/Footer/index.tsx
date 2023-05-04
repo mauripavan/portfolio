@@ -3,6 +3,8 @@ import { images } from "@component/assets/images";
 import { TfiLinkedin } from "react-icons/tfi";
 import { FaGithub } from "react-icons/fa";
 import { BiRightArrowAlt } from "react-icons/bi";
+import { navbarButtons } from "../Navbar";
+import { scrollToSection } from "@component/utils/useScroll";
 
 const Footer = () => {
   const { profile } = images;
@@ -20,9 +22,16 @@ const Footer = () => {
               <p className="font-normal text-2xl text-gray-40 mt-4">
                 Full Stack Developer
               </p>
-              <div className="flex gap-4 mt-4 items-center">
-                <TfiLinkedin className="w-7 h-7" />
-                <FaGithub className="w-7 h-7" />
+              <div className="flex gap-4 mt-4 items-center hover:text-neutral-0">
+                <a
+                  href="https://www.linkedin.com/in/mauriciopavan/"
+                  target={"_blank"}
+                >
+                  <TfiLinkedin className="w-7 h-7 hover:-translate-y-2 transition-all duration-200 hover:text-white" />
+                </a>
+                <a href="https://github.com/mauripavan" target={"_blank"}>
+                  <FaGithub className="w-7 h-7 hover:-translate-y-2 transition-all duration-200 hover:text-white" />
+                </a>
               </div>
             </div>
           </div>
@@ -37,16 +46,18 @@ const Footer = () => {
             <div className="flex mt-8 gap-8">
               <div className="flex flex-fit flex-col">
                 <p className="font-bold text-gray-40">EMAIL ME:</p>
-                <div className="flex items-center h-10 border-b-4 border-gray-20 text-xl font-extrabold">
-                  <p>mauriciopavan60@gmail.com</p>
-                  <BiRightArrowAlt className="w-8 h-8" />
+                <div className="flex items-center h-10 border-b-4 border-gray-20 text-xl font-extrabold hover:border-white transition-all duration-200 cursor-pointer group">
+                  <a href='mailto:mauriciopavan60@gmail.com'>
+                    <p>mauriciopavan60@gmail.com</p>
+                  </a>
+                  <BiRightArrowAlt className="w-8 h-8 transition-all duration-200 group-hover:translate-x-2 group-hover:text-blue" />
                 </div>
               </div>
               <div className="flex flex-fit flex-col">
                 <p className="font-bold text-gray-40">CALL ME:</p>
-                <div className="flex items-center h-10 border-b-4 border-gray-20 text-xl font-extrabold">
-                  <p>(+54)1123983428</p>
-                  <BiRightArrowAlt className="w-8 h-8" />
+                <div className="flex items-center h-10 border-b-4 border-gray-20 text-xl font-extrabold hover:border-white transition-all duration-200 cursor-pointer group">
+                  <a href="tel:(+54)1123983428"><p>(+54)1123983428</p></a>
+                  <BiRightArrowAlt className="w-8 h-8 transition-all duration-200 group-hover:translate-x-2 group-hover:text-blue" />
                 </div>
               </div>
             </div>
@@ -54,12 +65,17 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex mx-28 h-20 items-center justify-between">
-        <div className="flex text-xl gap-4">
-          <p>Home</p>
-          <p>About</p>
-          <p>Tech Stack</p>
-          <p>Projects</p>
-          <p>Contact</p>
+        <div className="flex w-1/2 text-xl gap-4 hover:text-gray-0 transition duration-150">
+          {navbarButtons.map((button, i) => {
+            return (
+              <div
+                onClick={() => scrollToSection(button.to)}
+                className="flex flex-1 justify-center hover:text-white transition duration-150 cursor-pointer"
+              >
+                <p key={i}>{button.name}</p>
+              </div>
+            );
+          })}
         </div>
         <div>
           <p>Copyright © Mauricio Pavan | Designed by Mauricio Pavan</p>

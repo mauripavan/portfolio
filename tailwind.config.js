@@ -28,6 +28,9 @@ module.exports = {
         50: "#1b1f24",
       },
       white: "#ffffff",
+      neutral: {
+        0: "rgba(0, 0, 0, 0.7)"
+      }
     },
     fontFamily: {
       sans: ["Graphik", "sans-serif"],

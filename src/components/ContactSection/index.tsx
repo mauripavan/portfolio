@@ -2,7 +2,10 @@ import { BiRightArrowAlt } from "react-icons/bi";
 
 const ContactSection = () => {
   return (
-    <div className="flex font-space tracking-wider min-h-screen items-center mx-28">
+    <div
+      id="contact"
+      className="flex font-space tracking-wider min-h-screen items-center mx-28"
+    >
       <div className="flex flex-1">
         <div className="flex-1">
           <div className="h-1.5 w-28 bg-white mb-6" />
@@ -33,8 +36,14 @@ const ContactSection = () => {
               id="description"
               className="bg-gray-50 border-b-2 border-gray-20 focus:outline-none placeholder:font-bold placeholder:text-white placeholder:text-2xl"
               placeholder="Describe your project"
-              rows={10}
+              rows={5}
             ></textarea>
+            <div
+              className="flex items-center gap-2 mt-12 border-b-2 border-gray-20 w-fit h-12 hover:border-white transition-all duration-200 cursor-pointer group"
+            >
+              <p>Contact me</p>
+              <BiRightArrowAlt className="w-7 h-7 transition-all group-hover:translate-x-2 group-hover:text-blue" />
+            </div>
           </form>
         </div>
       </div>

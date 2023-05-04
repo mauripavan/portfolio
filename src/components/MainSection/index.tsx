@@ -5,6 +5,7 @@ import { FaGithub } from "react-icons/fa";
 import { images } from "@component/assets/images";
 import HomeCard from "../HomeCard";
 import { IHomeCardProps } from "../HomeCard/types";
+import { scrollToSection } from "@component/utils/useScroll";
 
 const MainSection = () => {
   const { profile } = images;
@@ -17,7 +18,7 @@ const MainSection = () => {
         on.`,
       link: {
         name: "LEARN MORE",
-        to: "",
+        to: "stack",
       },
     },
     {
@@ -26,13 +27,14 @@ const MainSection = () => {
         form, we can create amazing things togheter.`,
       link: {
         name: "COMPLETE FORM",
-        to: "",
+        to: "contact",
       },
     },
   ];
 
   return (
     <div
+      id="home"
       className={
         "flex flex-1 font-space mx-28 tracking-wider min-h-screen relative pb-16"
       }
@@ -43,8 +45,11 @@ const MainSection = () => {
         <p className="font-normal text-gray-30 mt-4 text-lg w-1/2">
           Welcome to my website. Let's take a look to some of my jobs!
         </p>
-        <div className="flex items-center justify-center bg-blue h-32 w-32 rounded-full mt-20">
-          <HiOutlineChevronDown className="w-12 h-12" />
+        <div
+          onClick={() => scrollToSection("about")}
+          className="flex items-center justify-center bg-blue h-32 w-32 rounded-full mt-20 hover:scale-90 transition-all duration-200"
+        >
+          <HiOutlineChevronDown className="w-12 h-12 animate-bounce" />
         </div>
       </div>
 
@@ -69,9 +74,13 @@ const MainSection = () => {
 
         <div className="w-3/5 mt-12">
           <p className="font-bold font-bold">FOLLOW ME</p>
-          <div className="flex gap-4 mt-4 items-center">
-            <TfiLinkedin className="w-7 h-7" />
-            <FaGithub className="w-7 h-7" />
+          <div className="flex gap-4 mt-4 items-center hover:text-neutral-0">
+            <a href="https://www.linkedin.com/in/mauriciopavan/" target={'_blank'}>
+              <TfiLinkedin className="w-7 h-7 hover:-translate-y-2 transition-all duration-200 hover:text-white" />
+            </a>
+            <a href="https://github.com/mauripavan" target={'_blank'}>
+              <FaGithub className="w-7 h-7 hover:-translate-y-2 transition-all duration-200 hover:text-white" />
+            </a>
           </div>
         </div>
       </div>

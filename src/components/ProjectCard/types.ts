@@ -3,4 +3,5 @@ export interface IProjectCard {
     title: string;
     description: string;
     index?: any;
+    link: string;
   }
