@@ -1,12 +1,9 @@
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import TechCard from "@component/components/TechCard";
 import useTechSection from "./useTechSection";
-import { useEffect, useRef } from "react";
 
 const TechSection = () => {
   const { technologies } = useTechSection();
-
-  const cardContainerRef = useRef(null);
 
   const handleScroll = (scrollOfset: number) => {
     const slider: any = document.getElementById("slider");
@@ -28,20 +25,23 @@ const TechSection = () => {
           <div className="flex gap-4">
             <div
               onClick={() => handleScroll(-700)}
-              className="flex w-20 h-20 bg-gray-0 rounded-full items-center justify-center"
+              className="flex w-20 h-20 bg-gray-0 rounded-full items-center justify-center hover:bg-blue hover:scale-90 transition-all duration-300"
             >
               <FiChevronLeft className="w-7 h-7" />
             </div>
             <div
               onClick={() => handleScroll(700)}
-              className="flex w-20 h-20 bg-blue rounded-full items-center justify-center"
+              className="flex w-20 h-20 bg-blue rounded-full items-center justify-center hover:scale-90 transition-all duration-300"
             >
               <FiChevronRight className="w-7 h-7" />
             </div>
           </div>
         </div>
-        <div id="slider" ref={cardContainerRef} className="relative overflow-x-scroll scroll scroll-smooth">
-          <div  className="flex gap-8 max-w-4xl">
+        <div
+          id="slider"
+          className="relative overflow-x-scroll scroll scroll-smooth"
+        >
+          <div className="flex gap-8 max-w-4xl">
             {technologies.map((card, i) => {
               return (
                 <TechCard
