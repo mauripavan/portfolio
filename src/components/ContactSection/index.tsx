@@ -65,6 +65,7 @@ const ContactSection = () => {
                   placeholder="Enter your name"
                   name="name"
                   type="text"
+                  required
                 ></input>
               </div>
               <div className="w-full h-16 mb-12 border-b-2 border-gray-20">
@@ -73,6 +74,7 @@ const ContactSection = () => {
                   placeholder="Your email adress"
                   name="email"
                   type="email"
+                  required
                 ></input>
               </div>
               <textarea
@@ -81,12 +83,13 @@ const ContactSection = () => {
                 className="bg-gray-50 border-b-2 border-gray-20 focus:outline-none placeholder:font-bold placeholder:text-white placeholder:text-2xl"
                 placeholder="Describe your project"
                 rows={5}
+                required
               ></textarea>
               <button
                 type="submit"
                 className="flex items-center gap-2 mt-12 border-b-2 border-gray-20 w-fit h-12 hover:border-white transition-all duration-200 cursor-pointer group"
               >
-                <p>{loading? 'Plase wait...' : 'Contact me'}</p>
+                <p>{loading ? "Plase wait..." : "Contact me"}</p>
                 <BiRightArrowAlt className="w-7 h-7 transition-all group-hover:translate-x-2 group-hover:text-blue" />
               </button>
             </form>
