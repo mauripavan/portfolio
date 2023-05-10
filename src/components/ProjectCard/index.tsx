@@ -1,8 +1,9 @@
 import { FaGithub, FaCode } from "react-icons/fa";
 import { IProjectCard } from "./types";
+import Image from "next/image";
 
 const ProjectCard = (props: IProjectCard) => {
-  const { description, technologies, title, index, link } = props;
+  const { description, technologies, title, index, link, images } = props;
   return (
     <div className="flex justify-center w-1/2">
       <div
@@ -35,9 +36,15 @@ const ProjectCard = (props: IProjectCard) => {
         </div>
         <p className="font-bold text-3xl mt-4">{description}</p>
         <div className="flex w-full h-[27rem] absolute bottom-0 right-0 -rotate-6">
-          <div className="absolute left-0 bottom-0 z-20 bg-yellow w-1/2 h-4/6 rounded-xl group-hover:scale-110 transition-all duration-500" />
-          <div className="absolute right-1/4 bottom-0 z-10 bg-orange w-2/3 h-5/6 rounded-xl group-hover:scale-110 transition-all duration-500" />
-          <div className="absolute right-0 bottom-0 z-0 bg-blue w-3/4 h-full rounded-xl group-hover:scale-110 transition-all duration-500" />
+          <div className="absolute left-0 bottom-0 z-20 w-1/2 h-4/6 rounded-4xl group-hover:scale-110 transition-all duration-500">
+            <Image src={images[3]} alt={"visual1"} className="rounded-4xl" />
+          </div>
+          <div className="absolute right-1/4 bottom-0 z-10 w-2/3 h-5/6 rounded-4xl group-hover:scale-110 transition-all duration-500">
+            <Image src={images[2]} alt={"visual2"} className="rounded-4xl" />
+          </div>
+          <div className="absolute right-0 bottom-0 z-0 w-3/4 h-full rounded-4xl group-hover:scale-110 transition-all duration-500">
+            <Image src={images[1]} alt={"visual3"} className="rounded-4xl" />
+          </div>
         </div>
       </div>
     </div>
