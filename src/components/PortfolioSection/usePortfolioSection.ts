@@ -17,7 +17,7 @@ const usePortfolioSection = () => {
       title: "Turno Web - Cooming Soon",
       description: "Book shifts for companies with physical branches",
       technologies: ["ReactJS", "NodeJs"],
-      link: "https://github.com/mauripavan/Flow-Delta",
+      link: "https://github.com/mauripavan/my-turno",
       images: { 1: turnoWeb1, 2: turnoWeb2, 3: turnoWeb3 },
     },
   ];
