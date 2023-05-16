@@ -4,13 +4,13 @@ import usePortfolioSection from "./usePortfolioSection";
 const PortfolioSection = () => {
   const { projects } = usePortfolioSection();
   return (
-    <div id="portfolio" className="flex flex-1 min-h-screen bg-gray-10 font-space tracking-wider py-60">
-      <div className="flex flex-wrap mx-28">
-        <div className="w-1/2">
+    <div id="portfolio" className="flex flex-1 min-h-screen bg-gray-10 font-space justify-center tracking-wider py-60 ">
+      <div className="flex flex-col lg:flex-row flex-wrap mx-4 lg:mx-28">
+        <div className="w-full lg:w-1/2">
           <p className="font-bold text-xl">
             <span className="text-blue">/ </span>MY PORTFOLIO
           </p>
-          <p className="font-bold text-5xl mt-6">
+          <p className="font-bold text-xl xl:text-5xl mt-6">
             Take a look at the latest projects I’ve done
           </p>
         </div>

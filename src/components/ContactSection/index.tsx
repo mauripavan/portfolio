@@ -31,21 +31,22 @@ const ContactSection = () => {
   return (
     <div
       id="contact"
-      className="flex font-space tracking-wider min-h-screen items-center mx-28"
+      className="flex font-space tracking-wider min-h-screen items-center mx-12 lg:mx-28"
     >
-      <div className="flex flex-1">
+      <div className="flex flex-col flex-1 md:flex-row">
         <div className="flex-1">
           <div className="h-1.5 w-28 bg-white mb-6" />
-          <p className="font-bold text-5xl w-3/4">
+          <p className="font-bold text-2xl lg:text-5xl w-3/4">
             Interested in working together?
           </p>
           <div className="flex mt-0.5 items-center">
-            <p className="font-bold text-5xl">Let’s talk</p>
-            <BiRightArrowAlt className="w-14 h-14 text-blue" />
+            <p className="font-bold text-2xl lg:text-5xl">Let’s talk</p>
+            <BiRightArrowAlt className="w-10 h-10 lg:w-14 lg:h-14 text-blue" />
           </div>
         </div>
+
         <div
-          className={`flex flex-1 h-96 ${
+          className={`flex flex-1 h-96 mt-8 md:mt-0 ${
             result && "bg-gray-0 items-center justify-center rounded-xl"
           }`}
         >
@@ -59,9 +60,9 @@ const ContactSection = () => {
                 name="access_key"
                 value="4bb131cd-c3a3-4f5a-95cd-b83231d244e0"
               />
-              <div className="w-full h-16 mb-12 border-b-2 border-gray-20">
+              <div className="w-full h-10 lg:h-16 mb-12 border-b-2 border-gray-20">
                 <input
-                  className="w-full h-full bg-gray-50 focus:outline-none placeholder:font-bold placeholder:text-white placeholder:text-2xl text-2xl"
+                  className="w-full h-full bg-gray-50 focus:outline-none placeholder:font-bold placeholder:text-white placeholder:text-lg text-lg lg:placeholder:text-2xl lg:text-2xl"
                   placeholder="Enter your name"
                   name="name"
                   type="text"
@@ -70,7 +71,7 @@ const ContactSection = () => {
               </div>
               <div className="w-full h-16 mb-12 border-b-2 border-gray-20">
                 <input
-                  className="w-full h-full bg-gray-50 focus:outline-none placeholder:font-bold placeholder:text-white placeholder:text-2xl text-2xl"
+                  className="w-full h-full bg-gray-50 focus:outline-none placeholder:font-bold placeholder:text-white placeholder:text-lg text-lg lg:placeholder:text-2xl lg:text-2xl"
                   placeholder="Your email adress"
                   name="email"
                   type="email"
@@ -80,9 +81,9 @@ const ContactSection = () => {
               <textarea
                 name="description"
                 id="description"
-                className="bg-gray-50 border-b-2 border-gray-20 focus:outline-none placeholder:font-bold placeholder:text-white placeholder:text-2xl"
+                className="bg-gray-50 border-b-2 border-gray-20 focus:outline-none placeholder:font-bold placeholder:text-white placeholder:text-lg text-lg lg:placeholder:text-2xl lg:text-2xl"
                 placeholder="Describe your project"
-                rows={5}
+                rows={3}
                 required
               ></textarea>
               <button
