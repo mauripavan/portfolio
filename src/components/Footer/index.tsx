@@ -18,7 +18,9 @@ const Footer = () => {
               <Image src={profile} alt={"profile"} className="absolute  " />
             </div>
             <div>
-              <p className="font-extrabold text-xl lg:text-3xl">Mauricio Pavan</p>
+              <p className="font-extrabold text-xl lg:text-3xl">
+                Mauricio Pavan
+              </p>
               <p className="font-normal text-lg lg:text-2xl text-gray-40 mt-4">
                 Full Stack Developer
               </p>
@@ -47,7 +49,7 @@ const Footer = () => {
               <div className="flex flex-fit flex-col">
                 <p className="font-bold text-gray-40">EMAIL ME:</p>
                 <div className="flex items-center h-10 border-b-4 border-gray-20 text-md lg:text-xl font-extrabold hover:border-white transition-all duration-200 cursor-pointer group">
-                  <a href='mailto:mauriciopavan60@gmail.com'>
+                  <a href="mailto:mauriciopavan60@gmail.com">
                     <p>mauriciopavan60@gmail.com</p>
                   </a>
                   <BiRightArrowAlt className="w-4 h-4 lg:w-8 lg:h-8 transition-all duration-200 group-hover:translate-x-2 group-hover:text-blue" />
@@ -56,7 +58,9 @@ const Footer = () => {
               <div className="flex flex-fit flex-col">
                 <p className="font-bold text-gray-40">CALL ME:</p>
                 <div className="flex items-center h-10 border-b-4 border-gray-20 text-md lg:text-xl font-extrabold hover:border-white transition-all duration-200 cursor-pointer group">
-                  <a href="tel:(+54)1123983428"><p>(+54)1123983428</p></a>
+                  <a href="tel:(+54)1123983428">
+                    <p>(+54)1123983428</p>
+                  </a>
                   <BiRightArrowAlt className="w-4 h-4 lg:w-8 lg:h-8 transition-all duration-200 group-hover:translate-x-2 group-hover:text-blue" />
                 </div>
               </div>
@@ -69,10 +73,11 @@ const Footer = () => {
           {navbarButtons.map((button, i) => {
             return (
               <div
+                key={i}
                 onClick={() => scrollToSection(button.to)}
                 className="flex flex-1 justify-center hover:text-white transition duration-150 cursor-pointer"
               >
-                <p key={i}>{button.name}</p>
+                <p>{button.name}</p>
               </div>
             );
           })}

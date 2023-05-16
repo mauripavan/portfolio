@@ -14,7 +14,7 @@ const AboutMeSection = () => {
               <span className="text-blue">/ </span>ABOUT ME
             </p>
             <p className="font-bold text-2xl lg:text-5xl mt-6 mb-4">
-              I’ve been developing websites & apps since 2022
+              I've been developing websites & apps since 2022
             </p>
             <p className="text-md lg:text-lg text-gray-40 mb-12">
               I started to work as a developer after finishing my studies on

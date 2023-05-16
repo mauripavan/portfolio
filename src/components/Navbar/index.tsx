@@ -46,10 +46,11 @@ const NavBar = () => {
           {navbarButtons.map((button, i) => {
             return (
               <div
+                key={i}
                 onClick={() => scrollToSection(button.to)}
                 className={`flex flex-1 justify-center hover:text-white transition-all duration-10 cursor-pointer`}
               >
-                <p className="text-center text-xs lg:text-base" key={i}>
+                <p className="text-center text-xs lg:text-base">
                   {button.name}
                 </p>
               </div>
