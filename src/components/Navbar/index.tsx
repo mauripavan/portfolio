@@ -40,7 +40,7 @@ const NavBar = () => {
       <div className="flex flex-1 w-full mx-4 lg:mx-28 justify-between tracking-wider">
         <div className="lg:flex lg:flex-1 items-center gap-2 hidden ">
           <FaCode className="w-9 h-9 text-blue" />
-          <p className="font-bold text-lg"> Developer X</p>
+          <p className="font-bold text-lg"> Mauri</p>
         </div>
         <div className="flex flex-1 justify-center items-center hover:text-gray-0 transition duration-150">
           {navbarButtons.map((button, i) => {
