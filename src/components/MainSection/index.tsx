@@ -14,7 +14,7 @@ const MainSection = () => {
     {
       title: "TECH STACK",
       description: `Discover the technologies I use to develop both, mobile apps and
-        web sites, as well as the last proyects in which I've been working
+        web sites, as well as the last projects in which I've been working
         on.`,
       link: {
         name: "LEARN MORE",
@@ -24,7 +24,7 @@ const MainSection = () => {
     {
       title: "CONTACT ME",
       description: `Do you have something in mind to create? Let's chat! Complete the
-        form, we can create amazing things togheter.`,
+        form, we can create amazing things together.`,
       link: {
         name: "COMPLETE FORM",
         to: "contact",
